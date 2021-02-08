@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h2 single image upload
+  form(action="/single" method='post' enctype="multipart/form-data") 
+    input(type="file" name="multer" required)
+    button 보내기
+  hr
+  h2 single image upload(파일 이름)
+  form(action="/single/name" method='post' enctype="multipart/form-data") 
+    input(type="file" name="multerName" required)
+    button 보내기
+  hr
+  h2 multi image upload 
+  form(action="/multi" method='post' enctype="multipart/form-data")
+    input(type="file" name="one" required)
+    input(type="file" name="two" required)
+    input(type="file" name="three" required)
+    button 보내기
+  hr
+  h2 multi image upload(파일 이름)
+  form(action="/multi/name" method='post' enctype="multipart/form-data")
+    input(type="file" name="oneName" required)
+    input(type="file" name="twoName" required)
+    input(type="file" name="threeName" required)
+    button 보내기
